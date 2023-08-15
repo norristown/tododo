@@ -33,14 +33,6 @@ export default class Navbar {
             {
                 text: 'Add Project',
                 icon: this.createIcon('plus.png')
-            },
-            {
-                text: 'Notifications',
-                icon: this.createIcon('bell.png')
-            },
-            {
-                text: 'Home',
-                icon: this.createIcon('home-account.png')
             }
         ];
 

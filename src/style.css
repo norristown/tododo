@@ -26,7 +26,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #fb923c;
+  background-color: #e5e7eb;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -37,7 +37,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  background-color: #fb923c;
+  background-color: #e5e7eb;
 }
 
 .header-left,
@@ -81,7 +81,7 @@ body {
 .sidebar-container {
   position: absolute;
   grid-column: 1;
-  background-color: #fb923c;
+  background-color: #e5e7eb;
   height: 100vh;
 }
 
