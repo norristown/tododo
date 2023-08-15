@@ -7,7 +7,6 @@ const create = require('./create')
 import globalArray from './GlobalArray'
 import Dom from './Dom'
 const dueToday = require('./today')
-const loadLocalStorage = require('./localStorage')
 
 // loadLocalStorage.loadLocalStorage()
 
@@ -24,10 +23,20 @@ addClick.addEventListener('click', () => {
     project.click()
 })
 
-const homeText = document.createElement('h1')
-homeText.textContent = 'Click Add Project To Get Started'
-homeText.classList.add('home-text')
-content.appendChild(homeText)
+if (localStorage.getItem('localStorageArray') === '[]' || localStorage.getItem('localStorageArray') === 'null') {
+    console.log('sdkfjhdskjfh')
+    const homeText = document.createElement('h1')
+    homeText.textContent = 'Click Add Project To Get Started'
+    homeText.classList.add('home-text')
+    content.appendChild(homeText)
+} else {
+    create.create()
+    project.loadWindow()
+    const b = new Dom
+    b.domStuff()
+}
+
+
 
 sidebar.sideBarSelect()
 const sevenBtn = document.querySelector('.sidebar-item-2')

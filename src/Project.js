@@ -2,7 +2,7 @@ import Dom from './Dom'
 const Card = require('./Card')
 import { format } from 'date-fns'
 import globalArray from './GlobalArray'
-const loadLocalStorage = require('./localStorage')
+
 export default class Project {
 
     loadWindow() {
@@ -75,7 +75,8 @@ export default class Project {
 
         // let globalArray_serialized = JSON.stringify(globalArray.get())
         // localStorage.setItem('localStorageArray', globalArray_serialized)
-        loadLocalStorage.loadLocalStorage()
+        globalArray.setLocalStorage()
+        
 
         
 

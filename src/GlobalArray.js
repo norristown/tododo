@@ -1,6 +1,13 @@
+
 class GlobalArray {
     constructor() {
-        this.array = [];
+        
+        if (localStorage.getItem('localStorageArray') === '[]' || localStorage.getItem('localStorageArray') === 'null') {
+            this.array = []
+        } else {
+            console.log('390248')
+            this.array = this.getLocalStorage()
+        }
     }
 
     add(item) {
@@ -14,6 +21,13 @@ class GlobalArray {
     }
     splice(index, num) {
         this.array.splice(index, num)
+    }
+    setLocalStorage() {
+        this.globalArray_serialized = JSON.stringify(this.array)
+        localStorage.setItem('localStorageArray', this.globalArray_serialized) 
+    }
+    getLocalStorage() {
+        return JSON.parse(localStorage.getItem('localStorageArray'))
     }
 }
 
